@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
                 physicsManager.throwableEndPoint.SetActive(true);
                 isTriggeredOnce = false;
             }
-            else if (levelName == "Level_3")
+            else if (levelName == "Level_3" || levelName == "Level_4_Friends" || levelName == "Level_4_Shuttle" || levelName == "Level_5_Friends" || levelName == "Level_5_Shuttle")
             {
                 gravityChangeCount = 3;
             }

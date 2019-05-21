@@ -1363,11 +1363,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5714908240623676322, guid: fe92c95e63ca0f74cbf306e11993d441,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6775583085365727738, guid: fe92c95e63ca0f74cbf306e11993d441,
         type: 3}
       propertyPath: m_Name
@@ -1418,6 +1413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714908240623676322, guid: fe92c95e63ca0f74cbf306e11993d441,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4185980246258375143, guid: fe92c95e63ca0f74cbf306e11993d441,
         type: 3}
@@ -1842,16 +1842,6 @@ PrefabInstance:
       propertyPath: choicePanel
       value: 
       objectReference: {fileID: 6775583083679796064}
-    - target: {fileID: 8309024503715888257, guid: 8c5827e843bb35545821ada4baf78595,
-        type: 3}
-      propertyPath: friendsLevel
-      value: Level_4_Friends
-      objectReference: {fileID: 0}
-    - target: {fileID: 8309024503715888257, guid: 8c5827e843bb35545821ada4baf78595,
-        type: 3}
-      propertyPath: shuttleLevel
-      value: Level_4_Friends
-      objectReference: {fileID: 0}
     - target: {fileID: 8309024503715888270, guid: 8c5827e843bb35545821ada4baf78595,
         type: 3}
       propertyPath: m_LocalPosition.x

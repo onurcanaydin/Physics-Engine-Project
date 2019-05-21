@@ -53,5 +53,22 @@ MonoBehaviour:
   jetpackDrainCoeff: 40
   jetpackFillCoeff: 20
   nextLevel: 
+  friendsLevel: Level_4_Friends
+  shuttleLevel: Level_4_Shuttle
+  controlMode: 1
+  isSpringLevel: 0
+  textPanel: {fileID: 0}
+  text: {fileID: 0}
+  gravityChangeCountText: {fileID: 0}
+  choicePanel: {fileID: 0}
+  endingPanel: {fileID: 0}
+  endingText: {fileID: 0}
+  isTriggeredOnce: 0
+  gravityChangeCount: 0
   player: {fileID: 0}
   physicsManager: {fileID: 0}
+  springPointReached:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
