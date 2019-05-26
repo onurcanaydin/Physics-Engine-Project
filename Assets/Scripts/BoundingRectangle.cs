@@ -64,6 +64,16 @@ public class BoundingRectangle
                 }
                 overlaps = true;
             }
+            else if (otherRectangleLowerY >= lowerY && otherRectangleUpperY <= upperY)
+            {
+                interpenetratingX = Mathf.Abs(leftX - otherRectangleRightX);
+                if (length < interpenetratingX)
+                {
+                    interpenetratingX = length;
+                }
+                interpenetratingY = width;
+                overlaps = true;
+            }
         }
         else if (otherRectangleLeftX <= rightX && otherRectangleRightX >= rightX)
         {
@@ -93,6 +103,16 @@ public class BoundingRectangle
                 {
                     interpenetratingY = width;
                 }
+                overlaps = true;
+            }
+            else if (otherRectangleLowerY >= lowerY && otherRectangleUpperY <= upperY)
+            {
+                interpenetratingX = Mathf.Abs(rightX - otherRectangleLeftX);
+                if (length < interpenetratingX)
+                {
+                    interpenetratingX = length;
+                }
+                interpenetratingY = width;
                 overlaps = true;
             }
         }

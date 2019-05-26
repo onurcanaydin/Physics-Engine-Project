@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (player.particle.GetPosition().y > 13 || player.particle.GetPosition().y < -10)
+        if (player.particle.GetPosition().y > 13 || player.particle.GetPosition().y < -12)
         {
             Reset();
         }
@@ -105,11 +105,13 @@ public class GameManager : MonoBehaviour
             }
             else if(levelName == "Level_5_Friends")
             {
+                controlMode = ControlMode.noControl;
                 endingPanel.SetActive(true);
                 endingText.text = "Bob ran out of resources while searching for his friends. He couldn't return to the shuttle and he died";
             }
             else if(levelName == "Level_5_Shuttle")
             {
+                controlMode = ControlMode.noControl;
                 endingPanel.SetActive(true);
                 endingText.text = "Bob made it to shuttle and returned to the Earth but he will never know whether he left his friends there or not";
             }

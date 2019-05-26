@@ -7,7 +7,7 @@ public class AnchoredSpring : MonoBehaviour
     private Vector3 anchor;
     private float springConstant = 2f;
     private float restLength = 0f;
-    private float forceCoeff = 80f;
+    private float forceCoeff = 120f;
 
     public void ApplySpringForce(Particle particle, Vector3 mouseUpVector)
     {

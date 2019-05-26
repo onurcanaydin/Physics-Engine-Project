@@ -28,9 +28,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Vector3 startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        eventPoint = new Vector3(100f, -6f, 0);
+        eventPoint = new Vector3(100f, -5.1f, 0);
         particle = new Particle(new Vector3(startPos.x, startPos.y, startPos.z), 0.8f, 1f);
-        boundingRectangle = new BoundingRectangle(new Vector3(startPos.x, startPos.y, startPos.z), 1, 1);
+        boundingRectangle = new BoundingRectangle(new Vector3(startPos.x, startPos.y, startPos.z), 1.8f, 2.8f);
         particleContact = new ParticleContact(particle, 0f, new Vector3());
 
         Scene scene = SceneManager.GetActiveScene();
@@ -138,7 +138,28 @@ public class PlayerController : MonoBehaviour
         particle.SetForceAccum(accVector.x, accVector.y, accVector.z);
         particle.Integrate(Time.fixedDeltaTime);
         boundingRectangle.center = particle.GetPosition();
-        transform.position = particle.GetPosition().CycloneToUnity();        
+        transform.position = particle.GetPosition().CycloneToUnity();
+        float x;
+        float y;
+        if (particle.GetVelocity().x >= 0)
+        {
+            x = 2;
+        }
+        else
+        {
+            x = -2;
+        }
+
+        if (gameManager.downwardsGravity)
+        {
+            y = 2;
+        }
+        else
+        {
+            y = -2;
+        }
+
+        transform.localScale = new Vector3(x, y, 0f).CycloneToUnity();
     }
 
     public void SpringPopup()
