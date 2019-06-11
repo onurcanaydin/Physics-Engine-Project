@@ -10,9 +10,11 @@ public class ThrowableController : MonoBehaviour
     public ParticleContact particleContact;
     public AnchoredSpring anchoredSpring;
     public GameManager gameManager;
+    public TrailRenderer tr;
 
     private void Start()
     {
+        tr = GetComponent<TrailRenderer>();
         startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         throwableParticle = new Particle(new Vector3(startPos.x, startPos.y, startPos.z), 0.9f, 1f);
         boundingRectangle = new BoundingRectangle(new Vector3(startPos.x, startPos.y, startPos.z), 1, 1);
@@ -24,6 +26,10 @@ public class ThrowableController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             Reset();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ClearRenderer();
         }
     }
 
@@ -44,6 +50,7 @@ public class ThrowableController : MonoBehaviour
     {
         if (gameManager.controlMode == GameManager.ControlMode.springControl)
         {
+            tr.emitting = true;
             UnityEngine.Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mp.z = 0;
             Vector3 mousePos = new Vector3(mp.x, mp.y, mp.z);
@@ -53,10 +60,16 @@ public class ThrowableController : MonoBehaviour
 
     public void Reset()
     {
+        tr.emitting = false;
         throwableParticle.SetAcceleration(0, 0, 0);
         throwableParticle.SetVelocity(0, 0, 0);
         throwableParticle.ClearAccumulator();
         throwableParticle.SetPosition(startPos.x, startPos.y, startPos.z);
         boundingRectangle.center = throwableParticle.GetPosition();
+    }
+
+    private void ClearRenderer()
+    {
+        tr.Clear();
     }
 }

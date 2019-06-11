@@ -2045,16 +2045,6 @@ PrefabInstance:
       value: Bob made it to remains of his base. He recharges his suit so he can alter
         gravity and use jetpack.
       objectReference: {fileID: 0}
-    - target: {fileID: 2878990819873316524, guid: fe92c95e63ca0f74cbf306e11993d441,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878990819873316524, guid: fe92c95e63ca0f74cbf306e11993d441,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 84
-      objectReference: {fileID: 0}
     - target: {fileID: 5714908240623676322, guid: fe92c95e63ca0f74cbf306e11993d441,
         type: 3}
       propertyPath: m_IsActive

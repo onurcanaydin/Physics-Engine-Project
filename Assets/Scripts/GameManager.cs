@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
             downwardsGravity = true;
             if (levelName == "Level_2")
             {
+                physicsManager.throwable.tr.Clear();
                 physicsManager.throwable.gameObject.SetActive(true);
                 physicsManager.throwable.Reset();
                 physicsManager.springBlock.SetActive(true);
